@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Your Financial Goals</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Target Amount</th>
+                <th>Current Savings</th>
+                <th>Deadline</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for goal in goals %}
+            <tr>
+                <td>{{ goal.description }}</td>
+                <td>{{ goal.target_amount }}</td>
+                <td>{{ goal.current_savings }}</td>
+                <td>{{ goal.deadline }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
